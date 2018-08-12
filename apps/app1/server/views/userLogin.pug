@@ -1,0 +1,24 @@
+extends layout.pug
+
+block content
+    .container
+        .row
+            h1 Войти
+            .col-md-12
+                form#user-login-form(method='POST', action='/api/user/login')
+                    .mb-3
+                        label(for='email')
+                            | Email
+                        input#email.form-control(type='email', placeholder='you@example.com', required=true)
+                        .invalid-feedback
+                            | Введите ваш email.
+                    .mb-3
+                        label(for='password') Пароль
+                        input#password.form-control(type='password', placeholder='', required=true)
+                        .invalid-feedback
+                            | Введите ваш пароль.
+                    hr.mb-4
+                    button.btn.btn-primary.btn-lg.btn-block(type='submit') Вход
+
+
+block scripts

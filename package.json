@@ -1,0 +1,21 @@
+{
+  "name": "debug_pm2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start ecosystem.config.js && pm2 logs",
+    "app1": "pm2 start apps/app1/server/bootstrap.js --node-args=\"--inspect\"",
+    "app2": "pm2 start apps/app2/server/bootstrap.js --node-args=\"--inspect\"",
+    "server": "pm2 start server.js --node-args=\"--inspect\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "nodemon": "^1.18.3",
+    "pug": "^2.0.3"
+  }
+}
